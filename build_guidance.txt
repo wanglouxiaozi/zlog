@@ -1,0 +1,15 @@
+一、amd64 platform 
+mkdir -p _build/amd64
+make clean && make
+make PREFIX=../_build/amd64 install 
+
+二、aarch64 platform
+mkdir -p _build/aarch64
+make clean && make CC=aarch64-linux-gnu-gcc
+make PREFIX=../_build/aarch64 install
+
+三、arm32 platform
+mkdir -p _build/arm32
+make clean && make CC=arm-linux-gnueabihf-gcc
+make PREFIX=../_build/arm32 install
+
